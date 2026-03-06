@@ -11,39 +11,40 @@ st.set_page_config(
 )
 
 # UI Styling
-st.markdown(
-"""
+st.markdown("""
 <style>
 
-/* Fix chat message text color */
-[data-testid="stChatMessage"] {
-    color: #1f2933 !important;
+/* page background */
+.main {
+    background: radial-gradient(circle at 20% 10%, #dff5e3 0%, #f7fbf8 50%, #eef3ef 100%);
 }
 
-/* Fix assistant message specifically */
-[data-testid="stChatMessage"] p {
-    color: #1f2933 !important;
+/* header card */
+.hero {
+    border: 1px solid #c6d8cb;
+    background: linear-gradient(120deg, #eef8f0, #f8faf7);
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    margin-bottom: 1rem;
 }
 
-/* Fix markdown text inside chat */
-[data-testid="stMarkdownContainer"] {
-    color: #1f2933 !important;
+/* scope note */
+.note {
+    border-left: 4px solid #2f7a58;
+    padding: 0.6rem 0.8rem;
+    background: #f0faf4;
+    border-radius: 6px;
+    color: #1d3328;
+    margin-top: 0.6rem;
 }
 
-/* User message bubble */
-[data-testid="stChatMessage"]:has(div[data-testid="stChatMessageAvatarUser"]) {
-    color: #1f2933 !important;
-}
-
-/* Assistant message bubble */
-[data-testid="stChatMessage"]:has(div[data-testid="stChatMessageAvatarAssistant"]) {
+/* ensure chat text always visible */
+.stChatMessage p {
     color: #1f2933 !important;
 }
 
 </style>
-""",
-unsafe_allow_html=True,
-)
+""", unsafe_allow_html=True)
 
 # Session state
 if "bot" not in st.session_state:
