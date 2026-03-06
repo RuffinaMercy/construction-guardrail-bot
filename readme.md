@@ -223,5 +223,3 @@ This project demonstrates:
 * Cloud deployment of AI systems
 
 ---
-
-Those **greatly improve portfolio impact**.
